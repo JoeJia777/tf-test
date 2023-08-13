@@ -37,5 +37,5 @@ jobs:
     - name: Terraform Init
       run: terraform init
         
-    - name: Terraform Destory
-      run: terraform destory -auto-approve -var access_key=${{secrets.ACCESS_KEY}} -var secret_key=${{secrets.SECRET_KEY}} -input=false
+    - name: Terraform Destroy
+      run: terraform destroy -auto-approve -var access_key=${{secrets.ACCESS_KEY}} -var secret_key=${{secrets.SECRET_KEY}} -input=false
