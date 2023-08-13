@@ -1,9 +1,10 @@
-name: 'Terraform'
+name: 'Terraform pull request'
 
 on:
   pull_request:
     branches: 
       - main
+
 
 permissions:
   contents: read
