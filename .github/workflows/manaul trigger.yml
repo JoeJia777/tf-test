@@ -35,12 +35,7 @@ jobs:
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
 
     - name: Terraform Init
-      uses: hashicorp/terraform-github-actions/init@v0.4.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        TF_ACTION_WORKING_DIR: 'terraform'
-        AWS_ACCESS_KEY_ID:  ${{ secrets.ACCESS_KEY }}
-        AWS_SECRET_ACCESS_KEY:  ${{ secrets.SECRET_KEY }}
+      run: terraform init
         
     - name: Terraform Apply
       run: terraform apply -auto-approve -var access_key=${{secrets.ACCESS_KEY}} -var secret_key=${{secrets.SECRET_KEY}} -input=false
