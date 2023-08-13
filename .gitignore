@@ -6,4 +6,4 @@ terraform.tfvars
 variables.tfvars
 *.tfvars
 *.variables.tfvars.swp
-
+*.tfvars.swp
