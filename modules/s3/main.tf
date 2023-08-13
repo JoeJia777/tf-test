@@ -42,11 +42,6 @@ resource "aws_s3_bucket_ownership_controls" "disable_root_s3_acl" {
   }
 }
 
-resource "aws_s3_bucket_acl" "root_acl" {
-  bucket = aws_s3_bucket.root_s3.id
-  acl    = "private"
-}
-
 resource "aws_s3_bucket_website_configuration" "root_static_web" {
   bucket = aws_s3_bucket.root_s3.id
 
